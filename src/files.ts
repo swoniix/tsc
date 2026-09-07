@@ -57,7 +57,7 @@ public static async writeToFile(filePath:string, content:string):Promise<void>{
         console.log("Файл не збережено")
     }
 }
-public static async readFile(filePath:string):Promise<string> { //error
+public static async readFile(filePath:string):Promise<Buffer> { 
     try{
         return await fs.readFile(filePath)
     }catch(error){
